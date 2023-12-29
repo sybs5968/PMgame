@@ -86,31 +86,31 @@ while RUNNING:
             Position_Player[0] += Speed_Player
     clock.tick(60)
 
-    
-# def Map_Maker(up , down , left , right , flag):
-#     if up >= down - 3 or left >= right - 3:
-#         return
-#     # print(up , down , left , right , flag)
-#     if flag:
-#         t = random.randint(up , down - 1)
-#         for i in range(left , right):
-#             if random.randint(1 , 10) <= 5:
-#                 Map[t][i] = (255,255,255)
-#                 if i != left:
-#                     Map[t][i-1] = (255,255,255)
-#                 if i+1 != right:
-#                     Map[t][i+1] = (255,255,255)
-#             # Map[t][i] = (255,255,255) if random.randint(1 , 10) > 3 else (0 , 0 , 0)
-#         Map_Maker(up , t , left , right , flag ^ 1)
-#         Map_Maker(t + 1 , down , left , right , flag ^ 1)
-#     else:
-#         t = random.randint(left , right - 1)
-#         for i in range(up , down):
-#             if random.randint(1 , 10) <= 5:
-#                 Map[i][t] = (255,255,255)
-#                 if i != up:
-#                     Map[i-1][t] = (255,255,255)
-#                 if i+1 != down:
-#                     Map[i+1][t] = (255,255,255)
-#         Map_Maker(up , down , left , t , flag ^ 1)
-#         Map_Maker(up , down , t + 1 , right , flag ^ 1)
+
+def Map_Maker(up , down , left , right , flag):
+    if up >= down - 3 or left >= right - 3:
+        return
+    # print(up , down , left , right , flag)
+    if flag:
+        t = random.randint(up , down - 1)
+        for i in range(left , right):
+            if random.randint(1 , 10) <= 5:
+                Map[t][i] = (255,255,255)
+                if i != left:
+                    Map[t][i-1] = (255,255,255)
+                if i+1 != right:
+                    Map[t][i+1] = (255,255,255)
+            # Map[t][i] = (255,255,255) if random.randint(1 , 10) > 3 else (0 , 0 , 0)
+        Map_Maker(up , t , left , right , flag ^ 1)
+        Map_Maker(t + 1 , down , left , right , flag ^ 1)
+    else:
+        t = random.randint(left , right - 1)
+        for i in range(up , down):
+            if random.randint(1 , 10) <= 5:
+                Map[i][t] = (255,255,255)
+                if i != up:
+                    Map[i-1][t] = (255,255,255)
+                if i+1 != down:
+                    Map[i+1][t] = (255,255,255)
+        Map_Maker(up , down , left , t , flag ^ 1)
+        Map_Maker(up , down , t + 1 , right , flag ^ 1)
