@@ -39,15 +39,15 @@ class Ghost(object):
 
         if check == 0:
             self.Position = [a , b]
-        # elif check == 1:
-        #     self.Position[0] += crash_dir[fix_dir][0] * self.Speed
-        #     self.Position[1] += crash_dir[fix_dir][1] * self.Speed
+        elif check == 1:
+            self.Position[0] += crash_dir[fix_dir][0] * self.Speed
+            self.Position[1] += crash_dir[fix_dir][1] * self.Speed
 
 class Player(Ghost):
     def __init__(self):
         super(Player , self).__init__()
-        self.ImgPath = [r"D:\download\PMGame\picture\cdr_white32_left.png",
-                        r"D:\download\PMGame\picture\cdr_white32_right.png"]
+        self.ImgPath = [r"picture\cdr_left.png",
+                        r"picture\cdr_right.png"]
         self.Direction = 3
         self.image = pygame.image.load(self.ImgPath[self.Direction - 2])
         self.Speed = 2
@@ -61,10 +61,10 @@ class Player(Ghost):
 class Ghost_Red(Ghost):
     def __init__(self):
         super(Ghost_Red , self).__init__()
-        self.ImgPath = [r"D:\download\PMGame\picture\Ghost_Red_White_32_left.png",
-                        r"D:\download\PMGame\picture\Ghost_Red_White_32_Right.png",
-                        r"D:\download\PMGame\picture\Ghost_Blue_White_32_left.png",
-                        r"D:\download\PMGame\picture\Ghost_Blue_White_32_Right.png"]
+        self.ImgPath = [r"picture\Ghost_Red_left.png",
+                        r"picture\Ghost_Red_Right.png",
+                        r"picture\Ghost_Blue_left.png",
+                        r"picture\Ghost_Blue_Right.png"]
         self.Direction = 3
         self.image  = pygame.image.load(self.ImgPath[self.Direction - 2])
         self.imageb = pygame.image.load(self.ImgPath[self.Direction])
@@ -89,10 +89,10 @@ class Ghost_Pink(Ghost):
     def __init__(self):
         super(Ghost_Pink , self).__init__()
         self.Limit = 7
-        self.ImgPath = [r"D:\download\PMGame\picture\Ghost_Pink_White_32_left.png",
-                        r"D:\download\PMGame\picture\Ghost_Pink_White_32_Right.png",
-                        r"D:\download\PMGame\picture\Ghost_Blue_White_32_left.png",
-                        r"D:\download\PMGame\picture\Ghost_Blue_White_32_Right.png"]
+        self.ImgPath = [r"picture\Ghost_Pink_left.png",
+                        r"picture\Ghost_Pink_Right.png",
+                        r"picture\Ghost_Blue_left.png",
+                        r"picture\Ghost_Blue_Right.png"]
         self.Direction = 3
         self.image  = pygame.image.load(self.ImgPath[self.Direction - 2])
         self.imageb = pygame.image.load(self.ImgPath[self.Direction])

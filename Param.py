@@ -16,6 +16,6 @@ Color_Blue     = (128,128,255)
 dir = [(0 , 1) , (0 , -1) , (1 , 0) , (-1 , 0)]
 udlr = [pygame.K_UP , pygame.K_DOWN , pygame.K_LEFT , pygame.K_RIGHT]
 Map = np.zeros((ROW_NUMBER , COL_NUMBER) , dtype=np.uint8)
-image_apple = pygame.image.load(r"D:\download\PMGame\picture\apple.png")
+image_apple = pygame.image.load(r"picture\apple.png")
 # Map_Show = np.zeros((ROW_NUMBER * SCALE , COL_NUMBER * SCALE , 3) , dtype=np.uint8)
         
